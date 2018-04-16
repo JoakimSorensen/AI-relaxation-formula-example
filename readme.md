@@ -11,7 +11,7 @@
 
 ##### 1. Creating Working Folder
 ##### 2. Clone The Repository
-	* 'git clone https://github.com/JoakimSorensen/AI-relaxation-formula-example.git'
+	* `git clone https://github.com/JoakimSorensen/AI-relaxation-formula-example.git`
 ##### 3. Move Into Repository Root
 ##### 4. Create Virtual Environment
 		* `virtualenv -p python3 venv`
