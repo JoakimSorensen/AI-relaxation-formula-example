@@ -33,17 +33,10 @@ def relaxation_formula(init_vals, conf_vals, loops=40, print_rate=5):
     plot_cnt = 0
     for i in range(loops):
         result = __relaxation_help_calc__(init_vals, conf_vals, prev_result)
-        if ind % print_rate == 0 or i == 0 or i == len(range(loops)) - 1:
-            try:
-                #plt.subplot(121 + plot_cnt)
-                plot_cnt += 1
-            except IndexError:
-                plot_cnt = 0
-                fig_nmr += 1
-                #plt.figure(fig_nmr)
-                #plt.subplot(120 + plot_cnt)
+        if i == 0 or i == len(init_vals) - 1:
             plt.plot(result)
-            plt.title("Iteration {}".format(ind))
+            plt.title("First and last iteration")
+        if ind % print_rate == 0 or i == 0 or i == len(range(loops)) - 1:
             ws.append(["Iteration {}".format(ind)])
             ws.append(result)
         if result == prev_result:
